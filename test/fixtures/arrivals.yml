@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  arrival_time: 2018-10-14 23:32:54
+  date: 2018-10-14
+  delay: 2018-10-14 23:32:54
+  airline: MyString
+  destination: MyString
+  flight_id: MyString
+  gate: MyString
+  terminal: MyString
+  status: MyString
+
+two:
+  arrival_time: 2018-10-14 23:32:54
+  date: 2018-10-14
+  delay: 2018-10-14 23:32:54
+  airline: MyString
+  destination: MyString
+  flight_id: MyString
+  gate: MyString
+  terminal: MyString
+  status: MyString

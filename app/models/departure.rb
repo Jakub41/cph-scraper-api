@@ -1,0 +1,2 @@
+class Departure < ApplicationRecord
+end
