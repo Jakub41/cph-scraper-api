@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f09fa132-8fea-4e8a-ba5e-1ab39dc4e999" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/cph_scraper_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cph_scraper_api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/schedule.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/schedule.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,12 +25,14 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Gemfile" value="2" />
+          <entry key="log" value="5" />
           <entry key="rb" value="23" />
           <entry key="yml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="Ruby" value="25" />
           <entry key="YAML" value="2" />
         </counts>
@@ -43,13 +42,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="308" />
-          <entry key="Ruby" value="348" />
+          <entry key="Ruby" value="350" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Gemfile" value="21" />
-          <entry key="rb" value="327" />
+          <entry key="rb" value="329" />
           <entry key="txt" value="308" />
         </counts>
       </usages-collector>
@@ -98,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/config/schedule.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="203">
-              <caret line="23" column="99" selection-start-line="23" selection-start-column="99" selection-end-line="23" selection-end-column="99" />
+              <caret line="23" column="172" selection-start-line="23" selection-start-column="172" selection-end-line="23" selection-end-column="172" />
             </state>
           </provider>
         </entry>
@@ -190,6 +189,11 @@
               <item name="cph_scraper_api" type="b2602c69:ProjectViewProjectNode" />
               <item name="cph_scraper_api" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cph_scraper_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cph_scraper_api" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -338,12 +342,12 @@
       <workItem from="1539546739593" duration="7485000" />
       <workItem from="1539604671101" duration="3008000" />
       <workItem from="1539611026795" duration="1145000" />
-      <workItem from="1539613700736" duration="5869000" />
+      <workItem from="1539613700736" duration="6225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17915000" />
+    <option name="totallyTimeSpent" value="18271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -469,10 +473,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/log/cron.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/schedule.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
-          <caret line="23" column="99" selection-start-line="23" selection-start-column="99" selection-end-line="23" selection-end-column="99" />
+          <caret line="23" column="172" selection-start-line="23" selection-start-column="172" selection-end-line="23" selection-end-column="172" />
         </state>
       </provider>
     </entry>
