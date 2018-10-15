@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'httparty', '~> 0.16.2'
 gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 gem 'json', '~> 2.1'
+gem 'date'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
