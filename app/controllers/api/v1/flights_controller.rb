@@ -28,13 +28,13 @@ module Api::V1
                     start_date = Date.parse(params[:start_date]) rescue ''
                     end_date   = Date.parse(params[:end_date]) rescue ''
                     if start_date.present? && end_date.present?
-                      Arrival.between(start_date, end_date).order(:date)
+                      Arrival.between(start_date, end_date).order(:date, :time)
                     elsif start_date.present?
-                      Arrival.from_date(start_date).order(:date)
+                      Arrival.from_date(start_date).order(:date, :time)
                     elsif end_date.present?
-                      Arrival.till_date(end_date).order(:date)
+                      Arrival.till_date(end_date).order(:date, :time)
                     else
-                      Arrival.all.order(:date)
+                      Arrival.all.order(:date, :time)
                     end
                   end
     end
@@ -46,13 +46,13 @@ module Api::V1
                       start_date   = Date.parse(params[:start_date]) rescue ''
                       end_date     = Date.parse(params[:end_date]) rescue ''
                       if start_date.present? && end_date.present?
-                        Departure.between(start_date, end_date).order(:date)
+                        Departure.between(start_date, end_date).order(:date, :time)
                       elsif start_date.present?
-                        Departure.from_date(start_date).order(:date)
+                        Departure.from_date(start_date).order(:date, :time)
                       elsif end_date.present?
-                        Departure.till_date(end_date).order(:date)
+                        Departure.till_date(end_date).order(:date, :time)
                       else
-                        Departure.all.order(:date)
+                        Departure.all.order(:date, :time)
                       end
                     end
     end

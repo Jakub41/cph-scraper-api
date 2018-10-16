@@ -24,6 +24,6 @@
 set :output, {:standard => '/Users/akublemiszewski/Documents/dev/RoR/cph_scraper_api/log/cron.log',
               :error => '/Users/akublemiszewski/Documents/dev/RoR/cph_scraper_api/log/error.log'}
 
-every 5.minute do
+every 7.minute do
   rake 'flights:set_departures_and_arrivals:set_data'
 end

@@ -14,41 +14,41 @@ class ScraperCphService
   end
 
   def execute
-    set_departures_for_3_days
-    set_arrivals_for_3_days
+    set_departures_for_2_days
+    set_arrivals_for_2_days
   end
 
   private
 
-  def set_departures_for_3_days
+  def set_departures_for_2_days
+    Departure.delete_all
     set_departures(departure_url, date)
     set_departures(departure_url, date + 1)
   end
 
-  def set_arrivals_for_3_days
-    set_arrivals(departure_url, date)
-    set_arrivals(departure_url, date + 1)
+  def set_arrivals_for_2_days
+    Arrival.delete_all
+    set_arrivals(arrival_url, date)
+    set_arrivals(arrival_url, date + 1)
   end
 
   def set_departures(url, date_param)
     parse_page = Nokogiri::HTML(open(url + "?date=#{date_param}")) rescue nil
     return if parse_page.nil?
 
-    data_rows = parse_page.css('.stylish-table__row--body').css('.stylish-table__row--body')
+    data_rows = parse_page.css('.stylish-table__row--body')
     data_rows.each do |row|
-      departure = Departure.where(
-          date:       date_param,
-          time:       row.at('.flights__table__col--time').search('span')[0]&.text,
-          flight_id:  row.at('.flights__table__col--destination').css('small')&.text
-      ).first_or_initialize
-
-      departure.airline     = row.css('.v--desktop-only')[1].at('span')&.text
-      departure.delay       = row.css('.v--desktop-only')[0].at('span')&.text
-      departure.destination = row.at('.flights__table__col--destination').css('strong')&.text
-      departure.gate        = row.at('.flights__table__col--gate').at('span')&.text
-      departure.terminal    = row.at('.flights__table__col--terminal').at('span')&.text
-      departure.status      = row.css('.stylish-table__cell')[6].at('span')&.text
-      departure.save
+      Departure.create(
+          date:        date_param,
+          time:        row.at('.flights__table__col--time').search('span')[0]&.text,
+          flight_no:   row.at('.flights__table__col--destination').css('small')&.text,
+          airline:     row.css('.v--desktop-only')[1].at('span')&.text,
+          expected:    row.css('.v--desktop-only')[0].at('span')&.text,
+          destination: row.at('.flights__table__col--destination').css('strong')&.text,
+          gate:        row.at('.flights__table__col--gate').at('span')&.text,
+          terminal:    row.at('.flights__table__col--terminal').at('span')&.text,
+          status:      row.css('.stylish-table__cell')[6].at('span')&.text
+      )
     end
   end
 
@@ -58,20 +58,17 @@ class ScraperCphService
 
     data_rows = parse_page.css('.stylish-table__row--body')
     data_rows.each do |row|
-      arrival = Arrival.where(
-          date:         date_param,
-          arrival_time: row.at('.flights__table__col--time').search('span')[0]&.text,
-          flight_id:    row.at('.flights__table__col--destination').css('small')&.text
-      ).first_or_initialize
-
-      arrival.airline       = row.css('.v--desktop-only')[1].at('span')&.text
-      arrival.from          = row.at('.flights__table__col--destination').css('strong')&.text
-      arrival.delay         = row.css('.v--desktop-only')[0].at('span')&.text
-      arrival.from          = row.at('.flights__table__col--destination').css('strong')&.text
-      arrival.gate          = row.at('.flights__table__col--gate').at('span')&.text
-      arrival.terminal      = row.at('.flights__table__col--terminal').at('span')&.text
-      arrival.status        = row.css('.stylish-table__cell')[6].at('span')&.text
-      arrival.save
+      Arrival.create(
+          date:          date_param,
+          time:          row.at('.flights__table__col--time').search('span')[0]&.text,
+          flight_no:     row.at('.flights__table__col--destination').css('small')&.text,
+          airline:       row.css('.v--desktop-only')[1].at('span')&.text,
+          arriving_from: row.at('.flights__table__col--destination').css('strong')&.text,
+          expected:      row.css('.v--desktop-only')[0].at('span')&.text,
+          gate:          row.at('.flights__table__col--gate').at('span')&.text,
+          terminal:      row.at('.flights__table__col--terminal').at('span')&.text,
+          status:        row.css('.stylish-table__cell')[6].at('span')&.text
+      )
     end
   end
 

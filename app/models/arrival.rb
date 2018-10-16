@@ -7,21 +7,15 @@ class Arrival < ApplicationRecord
 
   def in_hash
     {
-        arrival_time: get_time(arrival_time) || '',
+        time: time || '',
         date: date || '',
-        delay: get_time(delay) || '',
+        expected: expected || '',
         airline: airline || '',
-        from: from || '',
-        flight_id: flight_id || '',
+        arriving_from: arriving_from || '',
+        flight_no: flight_no || '',
         gate: gate || '',
         terminal: terminal || '',
         status: status || ''
     }
-  end
-
-  private
-
-  def get_time(str)
-    str.strftime('%H:%m') if str.present?
   end
 end
