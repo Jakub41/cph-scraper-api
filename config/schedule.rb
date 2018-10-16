@@ -21,7 +21,8 @@
 #
 
 # adds ">> /path/to/file.log 2>&1" to all commands
-set :output, {:standard => '/Users/akublemiszewski/Documents/dev/RoR/cph_scraper_api/log/cron.log', :error => '/Users/akublemiszewski/Documents/dev/RoR/cph_scraper_api/log/error.log'}
+set :output, {:standard => '/Users/akublemiszewski/Documents/dev/RoR/cph_scraper_api/log/cron.log',
+              :error => '/Users/akublemiszewski/Documents/dev/RoR/cph_scraper_api/log/error.log'}
 
 every 5.minute do
   rake 'flights:set_departures_and_arrivals:set_data'
