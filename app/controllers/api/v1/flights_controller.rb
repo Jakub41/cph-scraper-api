@@ -25,17 +25,7 @@ module Api::V1
       @arrivals = if params[:type].present? && params[:type] != 'arrival'
                     []
                   else
-                    start_date = Date.parse(params[:start_date]) rescue ''
-                    end_date   = Date.parse(params[:end_date]) rescue ''
-                    if start_date.present? && end_date.present?
-                      Arrival.between(start_date, end_date).order(:date, :time)
-                    elsif start_date.present?
-                      Arrival.from_date(start_date).order(:date, :time)
-                    elsif end_date.present?
-                      Arrival.till_date(end_date).order(:date, :time)
-                    else
-                      Arrival.all.order(:date, :time)
-                    end
+                    Arrival.filter(search_params)
                   end
     end
 
@@ -43,18 +33,24 @@ module Api::V1
       @departures = if params[:type].present? && params[:type] != 'departure'
                       []
                     else
-                      start_date   = Date.parse(params[:start_date]) rescue ''
-                      end_date     = Date.parse(params[:end_date]) rescue ''
-                      if start_date.present? && end_date.present?
-                        Departure.between(start_date, end_date).order(:date, :time)
-                      elsif start_date.present?
-                        Departure.from_date(start_date).order(:date, :time)
-                      elsif end_date.present?
-                        Departure.till_date(end_date).order(:date, :time)
-                      else
-                        Departure.all.order(:date, :time)
-                      end
+                      Departure.filter(search_params)
                     end
+    end
+
+    def search_params
+      @search_params ||= params.fetch(:filter, {}).permit(
+        :start_date,
+        :end_date,
+        :airline,
+        :arriving_from,
+        :flight_no,
+        :destination,
+        :from_time,
+        :till_time
+      ).tap do |permitted_params|
+        permitted_params[:start_date] = Date.parse(permitted_params[:start_date]) rescue nil
+        permitted_params[:end_date] = Date.parse(permitted_params[:end_date]) rescue nil
+      end
     end
   end
 end
