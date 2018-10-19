@@ -10,7 +10,7 @@ module Api::V1
       data[:arrivals]   = arrivals if arrivals.present?
       data[:departures] = departures if departures.present?
 
-      render json: data.to_json, status: :ok
+      render json: data.to_json, status: :ok, message: 'Loaded all flights'
     end
 
     def destroy_all
@@ -37,6 +37,11 @@ module Api::V1
                       Arrival.all.order(:date, :time)
                     end
                   end
+      data = data.where(airline: params[:airline]) if params[:airline].present?
+      data = data.where(flight_no: params[:flight_no]) if params[:flight_no].present?
+      data = data.where(time: params[:time]) if params[:time].present?
+      data = data.where("arriving_from ilike ?", "%#{params[:from]}%").uniq if params[:from].present?
+      return data
     end
 
     def filter_departures
@@ -55,6 +60,11 @@ module Api::V1
                         Departure.all.order(:date, :time)
                       end
                     end
+      data = data.where(airline: params[:airline]) if params[:airline].present?
+      data = data.where(flight_no: params[:flight_no]) if params[:flight_no].present?
+      data = data.where(time: params[:time]) if params[:time].present?
+      data = data.where("destination ilike ?", "%#{params[:destination]}%").uniq if params[:destination].present?
+      return data
     end
   end
 end
