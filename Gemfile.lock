@@ -90,6 +90,7 @@ GEM
       method_source (~> 0.9.0)
     puma (3.12.0)
     rack (2.0.5)
+    rack-cors (1.0.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.1)
@@ -110,6 +111,8 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
+    rails_db_info (0.2.0)
+      rails (>= 3.1.0)
     railties (5.2.1)
       actionpack (= 5.2.1)
       activesupport (= 5.2.1)
@@ -175,7 +178,9 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   pry (~> 0.11.3)
   puma (~> 3.11)
+  rack-cors
   rails (~> 5.2.1)
+  rails_db_info
   rspec-rails
   spring
   spring-watcher-listen (~> 2.0.0)
