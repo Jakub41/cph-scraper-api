@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  root to: "api/v1/flights#index"
-  namespace :api, defaults: { format: :json }, constraints: { subdomain: 'api' }, path: '/api' do
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :flights, only: [:index, :destroy_all]
     end
