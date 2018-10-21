@@ -5,7 +5,8 @@ const api = axios.create({
 });
 
 export const loadFlights = async (action) => {
-    const params = {type: action.filter};
-    const response = await api.get('/flights', {params});
+    const { type, params } = action.payload;
+    console.log(action.payload);
+    const response = await api.get(`/flights/${type}`, {params});
     return response;
 };

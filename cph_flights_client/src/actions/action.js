@@ -1,8 +1,8 @@
 import { LOAD_FLIGHT } from '../constant';
 
-export function loadFlights(filter) {
+export function loadFlights(payload) {
     return {
         type: LOAD_FLIGHT,
-        filter
+        payload
     }
 }

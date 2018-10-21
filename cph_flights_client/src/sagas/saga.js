@@ -7,6 +7,7 @@ import { loadFlights } from '../apis/api';
 
 function* getFlights (action) {
     const response = yield call(loadFlights, action);
+    console.log("response: ", response);
     if(response.statusText === 'OK') {
         yield put({type: LOAD_FLIGHT_SUCCEED, flights: response.data});
     } else {
