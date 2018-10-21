@@ -1,4 +1,5 @@
 module Api::V1
+
   class FlightsController < ApplicationController
 
     def index
@@ -39,3 +40,4 @@ module Api::V1
     end
   end
 end
+
