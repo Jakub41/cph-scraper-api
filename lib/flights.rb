@@ -1,11 +1,12 @@
 module Flights
 
-  class InvalidParamsError < StandardError; end
+  class InvalidParamsError < StandardError;
+  end
 
-  ARRIVAL_FLIGHT_TYPE   = 'arrivals'
+  ARRIVAL_FLIGHT_TYPE = 'arrivals'
   DEPARTURE_FLIGHT_TYPE = 'departures'
 
-  TIME_REGEX  = /^([0-1][0-9]|2[0-3]):[0-5][0-9]$/
+  TIME_REGEX = /^([0-1][0-9]|2[0-3]):[0-5][0-9]$/
   TIME_PARAMS = [:date, :time]
 
   PARAMS_MAPPING = {
@@ -26,7 +27,7 @@ module Flights
 
     flights = klass.order(:date, :time)
 
-    params.each { |field, value| flights = flights.where(PARAMS_MAPPING[field] => value) }
+    params.each {|field, value| flights = flights.where(PARAMS_MAPPING[field] => value)}
 
     flights
   end
