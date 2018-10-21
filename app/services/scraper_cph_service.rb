@@ -5,11 +5,12 @@ require 'date'
 require 'open-uri'
 
 class ScraperCphService
-  attr_reader :departure_url, :arrival_url, :date
+  attr_reader :date
+
+  CPH_ARRIVALS_URL = 'https://www.cph.dk/en/flight-information/arrivals'.freeze
+  CPH_DEPARTURES_URL = 'https://www.cph.dk/en/flight-information/departures'.freeze
 
   def initialize
-    @departure_url = Departure::CPH_URL
-    @arrival_url = Arrival::CPH_URL
     @date = Date.current
   end
 
@@ -21,15 +22,15 @@ class ScraperCphService
   private
 
   def set_departures_for_2_days
-    Departure.delete_all
-    set_departures(departure_url, date)
-    set_departures(departure_url, date + 1)
+    Flight.departures.delete_all
+    set_departures(CPH_DEPARTURES_URL, date)
+    set_departures(CPH_DEPARTURES_URL, date + 1)
   end
 
   def set_arrivals_for_2_days
-    Arrival.delete_all
-    set_arrivals(arrival_url, date)
-    set_arrivals(arrival_url, date + 1)
+    Flight.arrivals.delete_all
+    set_arrivals(CPH_ARRIVALS_URL, date)
+    set_arrivals(CPH_ARRIVALS_URL, date + 1)
   end
 
   def set_departures(url, date_param)
@@ -38,7 +39,8 @@ class ScraperCphService
 
     data_rows = parse_page.css('.stylish-table__row--body')
     data_rows.each do |row|
-      Departure.create(
+      Flight.create(
+          is_arrival:  0,
           date:        date_param,
           time:        row.at('.flights__table__col--time').search('span')[0]&.text,
           flight_no:   row.at('.flights__table__col--destination').css('small')&.text,
@@ -58,7 +60,8 @@ class ScraperCphService
 
     data_rows = parse_page.css('.stylish-table__row--body')
     data_rows.each do |row|
-      Arrival.create(
+      Flight.create(
+          is_arrival:    1,
           date:          date_param,
           time:          row.at('.flights__table__col--time').search('span')[0]&.text,
           flight_no:     row.at('.flights__table__col--destination').css('small')&.text,
