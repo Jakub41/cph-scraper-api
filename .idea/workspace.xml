@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f09fa132-8fea-4e8a-ba5e-1ab39dc4e999" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/cph_scraper_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cph_scraper_api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cph_flights_client/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/cph_flights_client/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cph_flights_client/src/actions/action.js" beforeDir="false" afterPath="$PROJECT_DIR$/cph_flights_client/src/actions/action.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cph_flights_client/src/apis/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/cph_flights_client/src/apis/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cph_flights_client/src/components/FlightsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/cph_flights_client/src/components/FlightsComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cph_flights_client/src/constants/tableFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/cph_flights_client/src/constants/tableFields.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cph_flights_client/src/containers/FlightsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/cph_flights_client/src/containers/FlightsContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cph_flights_client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/cph_flights_client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cph_flights_client/src/sagas/saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/cph_flights_client/src/sagas/saga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/api/v1/flights_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/api/v1/flights_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/spec_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,32 +32,34 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Gemfile" value="11" />
+          <entry key="Gemfile" value="13" />
           <entry key="Procfile" value="2" />
           <entry key="css" value="6" />
           <entry key="dev" value="1" />
           <entry key="ico" value="1" />
           <entry key="js" value="68" />
-          <entry key="json" value="5" />
+          <entry key="json" value="6" />
           <entry key="log" value="59" />
+          <entry key="md" value="1" />
           <entry key="rake" value="8" />
           <entry key="rb" value="172" />
           <entry key="rspec" value="1" />
           <entry key="svg" value="1" />
-          <entry key="yml" value="10" />
+          <entry key="yml" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="6" />
           <entry key="Image" value="1" />
-          <entry key="JSON" value="5" />
+          <entry key="JSON" value="6" />
           <entry key="JavaScript" value="68" />
           <entry key="Log" value="49" />
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Ruby" value="191" />
+          <entry key="Ruby" value="193" />
           <entry key="SVG" value="1" />
-          <entry key="YAML" value="10" />
+          <entry key="YAML" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.actions.runAnything" />
@@ -78,6 +69,7 @@
           <entry key="CSS" value="27" />
           <entry key="JSON" value="18" />
           <entry key="JavaScript" value="758" />
+          <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="393" />
           <entry key="Ruby" value="1017" />
         </counts>
@@ -90,6 +82,7 @@
           <entry key="dev" value="24" />
           <entry key="js" value="758" />
           <entry key="json" value="18" />
+          <entry key="md" value="4" />
           <entry key="rake" value="14" />
           <entry key="rb" value="960" />
           <entry key="txt" value="308" />
@@ -101,43 +94,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cph_flights_client/src/components/FlightsComponent.js">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cph_flights_client/src/containers/FlightsContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cph_flights_client/src/App.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+            <state relative-caret-position="1121">
+              <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cph_flights_client/src/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="276">
+                <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -177,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20181016193125_correct_arrivals_column_to_be_arrive_from.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/services/scraper_cph_service.rake" />
         <option value="$PROJECT_DIR$/db/migrate/20181016193804_change_departures_table_to_departures.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20181016193856_change_arrivals_table_to_arrivals.rb" />
@@ -228,6 +199,7 @@
         <option value="$PROJECT_DIR$/cph_flights_client/src/components/TimeComponent.js" />
         <option value="$PROJECT_DIR$/cph_flights_client/src/containers/FlightsContainer.js" />
         <option value="$PROJECT_DIR$/cph_flights_client/src/index.css" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -264,17 +236,6 @@
             <path>
               <item name="cph_scraper_api" type="b2602c69:ProjectViewProjectNode" />
               <item name="cph_scraper_api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cph_scraper_api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cph_scraper_api" type="462c0819:PsiDirectoryNode" />
-              <item name="cph_flights_client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cph_scraper_api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cph_scraper_api" type="462c0819:PsiDirectoryNode" />
-              <item name="cph_flights_client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -438,15 +399,16 @@
       <workItem from="1539957805818" duration="458000" />
       <workItem from="1539958544312" duration="16594000" />
       <workItem from="1540041488660" duration="10758000" />
-      <workItem from="1540126034475" duration="21124000" />
+      <workItem from="1540126034475" duration="23451000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93970000" />
+    <option name="totallyTimeSpent" value="96297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="826" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15450644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -481,22 +443,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cph_flights_client/src/App.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cph_flights_client/src/serviceWorker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2463">
@@ -586,13 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20181021193753_flights.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -677,13 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cph_flights_client/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -788,13 +720,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cph_flights_client/src/components/FlightsComponent.js">
+    <entry file="file://$PROJECT_DIR$/cph_flights_client/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="345">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cph_flights_client/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -808,17 +744,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cph_flights_client/src/App.css">
+    <entry file="file://$PROJECT_DIR$/cph_flights_client/src/components/FlightsComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        <state relative-caret-position="276">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cph_flights_client/src/index.css">
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cph_flights_client/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="368">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="276">
+            <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
