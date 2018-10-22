@@ -1,0 +1,21 @@
+.loading-indicator {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000000AA;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.last-updated {
+  color: rgb(49, 143, 231);
+}
+
+.react-datepicker__input-container input,
+.hour-picker {
+  height: 52px;
+}

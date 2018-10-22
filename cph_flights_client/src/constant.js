@@ -1,3 +1,6 @@
 export const LOAD_FLIGHT = 'FETCH_FLIGHT';
 export const LOAD_FLIGHT_SUCCEED = 'FETCH_FLIGHT_SUCCEED';
 export const LOAD_FLIGHT_FAILED = 'FETCH_FLIGHT_FAILED';
+
+export const SHOW_LOADER = 'SHOW_LOADER';
+export const HIDE_LOADER = 'HIDE_LOADER';

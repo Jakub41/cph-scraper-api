@@ -1,0 +1,15 @@
+.rt-tr-group:hover {
+  background: #EEE;
+}
+
+.ReactTable {
+  border: none;
+}
+
+.ReactTable .rt-thead.-header {
+  padding: 10px 0px;
+  box-shadow: none;
+  border-bottom: 1px solid #eee;
+  text-transform: uppercase;
+  color: #adadad;
+}

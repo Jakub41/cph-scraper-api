@@ -1,0 +1,20 @@
+.expected {
+    color: rgb(255,0,0);
+}
+
+.airline-name {
+    color: rgb(56, 152, 231);
+}
+
+.to_gate {
+    color: blue;
+}
+.boarding {
+    color: green;
+}
+.closing {
+    color: red;
+}
+.closed {
+    color: grey;
+}
